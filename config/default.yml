@@ -1,0 +1,20 @@
+db:
+  database: "musement"
+  username: "ba"
+  password: "root"
+
+deploy:
+  server:
+    src: .
+    dest: "YOUR DESTINATION"
+    delete: true
+    exclude:
+      - dist
+      - node_modules
+      - .git
+      - static/upload
+      - config/default.yaml
+  client:
+    src: dist/
+    dest: "YOUR DESTINATION"
+    delete: true
